@@ -1,0 +1,9 @@
+//VKScript file
+//Получение количества пользователей,
+//которые в графе образование вузом указали ОмГТУ
+
+//ОмГТУ соответствует ID=695,
+//подробнее https://vk.com/dev/database.getUniversities
+var emptyString = "";
+var universityID = 695;
+return API.users.search({"q":emptyString, "university":universityID, "count":0}).count;
